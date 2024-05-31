@@ -11,7 +11,7 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 31/05/2024 11:16:33
+ Date: 01/06/2024 12:02:12
 */
 
 SET NAMES utf8mb4;
@@ -38,6 +38,7 @@ CREATE TABLE `check1`  (
 -- ----------------------------
 INSERT INTO `check1` VALUES ('01cf409d-aa11-4954-a9cd-a7f858c9eeb4', '10002', '2023-12-31', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('296c5ee9-ed4d-49e8-bcc5-8cd47522a339', '10002', '2023-12-29', '年假', NULL, NULL, NULL, NULL);
+INSERT INTO `check1` VALUES ('55dc6026-0a79-4db6-97ed-691aeddbafab', '10001', '2024-06-01', '', '2024-06-01 11:54:54', NULL, '迟到', '');
 INSERT INTO `check1` VALUES ('627cc853-436a-467b-9100-255f6284609d', '10002', '2023-12-28', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('65805109-cf70-485e-8b73-e8909f483801', '10002', '2024-01-02', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('6adacc2a-b98a-41a7-bc08-9289719d80d4', '10002', '2023-12-27', '年假', NULL, NULL, NULL, NULL);
@@ -73,6 +74,7 @@ CREATE TABLE `customer`  (
 -- Records of customer
 -- ----------------------------
 INSERT INTO `customer` VALUES ('1c6694ba-aea5-4be7-a063-81d5d4c0d81a', '88877', '王先生', '18877777777', '安徽省蚌埠市', '个人', '', '10001');
+INSERT INTO `customer` VALUES ('3b53d596-cf2c-47c0-b95d-aa45f48e53a5', '55642', '云商科技有限公司', '15963582105', '安徽省合肥市', '公司', '', '10001');
 INSERT INTO `customer` VALUES ('e1840f51-ba25-4e5d-ba9c-19e1aa526d6d', '7775', '刘客户', '15877777777', '安徽省蚌埠市', '个人', '大老板', '10002');
 
 -- ----------------------------
@@ -92,6 +94,7 @@ CREATE TABLE `department`  (
 -- Records of department
 -- ----------------------------
 INSERT INTO `department` VALUES ('128216ff-8d37-4c6c-b468-96391bd5f09a', '100', '管理部', 1, 1);
+INSERT INTO `department` VALUES ('7304e7b3-b951-4ca1-a422-00a4762405de', '103', '财务部', 0, 0);
 INSERT INTO `department` VALUES ('7ca44c62-7aa1-41dd-ba3e-4bea2c308f26', '101', '技术部', 1, 1);
 INSERT INTO `department` VALUES ('e9b58925-b1a7-4aa1-9eed-bb01eab41ce3', '102', '人事部', 1, 1);
 

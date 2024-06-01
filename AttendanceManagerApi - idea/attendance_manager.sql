@@ -11,7 +11,7 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 01/06/2024 12:02:12
+ Date: 01/06/2024 12:19:27
 */
 
 SET NAMES utf8mb4;
@@ -38,7 +38,7 @@ CREATE TABLE `check1`  (
 -- ----------------------------
 INSERT INTO `check1` VALUES ('01cf409d-aa11-4954-a9cd-a7f858c9eeb4', '10002', '2023-12-31', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('296c5ee9-ed4d-49e8-bcc5-8cd47522a339', '10002', '2023-12-29', '年假', NULL, NULL, NULL, NULL);
-INSERT INTO `check1` VALUES ('55dc6026-0a79-4db6-97ed-691aeddbafab', '10001', '2024-06-01', '', '2024-06-01 11:54:54', NULL, '迟到', '');
+INSERT INTO `check1` VALUES ('55dc6026-0a79-4db6-97ed-691aeddbafab', '10001', '2024-06-01', '', '2024-06-01 11:54:54', '2024-06-01 12:16:21', '迟到', '早退');
 INSERT INTO `check1` VALUES ('627cc853-436a-467b-9100-255f6284609d', '10002', '2023-12-28', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('65805109-cf70-485e-8b73-e8909f483801', '10002', '2024-01-02', '年假', NULL, NULL, NULL, NULL);
 INSERT INTO `check1` VALUES ('6adacc2a-b98a-41a7-bc08-9289719d80d4', '10002', '2023-12-27', '年假', NULL, NULL, NULL, NULL);
@@ -94,7 +94,7 @@ CREATE TABLE `department`  (
 -- Records of department
 -- ----------------------------
 INSERT INTO `department` VALUES ('128216ff-8d37-4c6c-b468-96391bd5f09a', '100', '管理部', 1, 1);
-INSERT INTO `department` VALUES ('7304e7b3-b951-4ca1-a422-00a4762405de', '103', '财务部', 0, 0);
+INSERT INTO `department` VALUES ('7304e7b3-b951-4ca1-a422-00a4762405de', '103', '财务部', 1, 1);
 INSERT INTO `department` VALUES ('7ca44c62-7aa1-41dd-ba3e-4bea2c308f26', '101', '技术部', 1, 1);
 INSERT INTO `department` VALUES ('e9b58925-b1a7-4aa1-9eed-bb01eab41ce3', '102', '人事部', 1, 1);
 
@@ -127,6 +127,7 @@ CREATE TABLE `employee`  (
 -- ----------------------------
 INSERT INTO `employee` VALUES ('3ef8e879-176c-47fe-994c-3318ecd1c138', '10003', '刘大同', '男', '2000-02-03', 'e9b58925-b1a7-4aa1-9eed-bb01eab41ce3', '819b5c90-345f-4079-83d5-8339ffd61368', '3', '15853642953', '安徽省蚌埠市', '123456', '2024-03-01 00:00:00', '340441200002035312', '硕士', '未婚', '0');
 INSERT INTO `employee` VALUES ('6b8bf6e5-9dec-4694-a49a-8a04f173e39e', '10002', '李四', '女', '2002-06-05', '7ca44c62-7aa1-41dd-ba3e-4bea2c308f26', 'e5e8993c-243c-4c3f-86c2-b8e4802dd55a', '2', '15977777777', '安徽省蚌埠市', '123456', '2023-12-17 00:00:00', '110222200206057777', '大专', '未婚', '0');
+INSERT INTO `employee` VALUES ('a193f315-8788-410c-981b-2117ad1b15c2', '10004', '刘小霞', '女', '2000-06-10', '7304e7b3-b951-4ca1-a422-00a4762405de', 'c2d9ef5f-0a37-4921-8f9a-6c0f3cbcf405', '3', '15624835862', '安徽省蚌埠市', '123456', '2023-11-02 00:00:00', '123545200006102510', '硕士', '未婚', '0');
 INSERT INTO `employee` VALUES ('af7a4c44-6f55-404f-b37f-efa673c76dab', '10001', '张三', '男', '2000-10-10', '128216ff-8d37-4c6c-b468-96391bd5f09a', 'cbfec9b8-d693-41aa-80e6-c53dd03acecb', '3', '15511111111', '安徽省蚌埠市', '123456', '2023-12-16 00:00:00', '110555200010105555', '本科', '未婚', '0');
 
 -- ----------------------------
@@ -146,7 +147,7 @@ CREATE TABLE `employeetype`  (
 -- ----------------------------
 INSERT INTO `employeetype` VALUES ('1', '0', '其他岗位', 0);
 INSERT INTO `employeetype` VALUES ('2', '0', '技工岗位', 1);
-INSERT INTO `employeetype` VALUES ('3', '0', '管理岗位', 2);
+INSERT INTO `employeetype` VALUES ('3', '0', '管理岗位', 3);
 INSERT INTO `employeetype` VALUES ('4', '0', '普通岗位', 0);
 
 -- ----------------------------
@@ -290,6 +291,7 @@ CREATE TABLE `position`  (
 INSERT INTO `position` VALUES ('2a0a0738-5822-4732-ae80-b279430ed67a', '1001', '系统管理员', 16000, 0, '', '3');
 INSERT INTO `position` VALUES ('5a34a879-6523-4280-864a-7d501a2502be', '10001', '系统管理员', 16000, 0, '', '3');
 INSERT INTO `position` VALUES ('819b5c90-345f-4079-83d5-8339ffd61368', '50001', '人事经理', 10000, 1, 'e9b58925-b1a7-4aa1-9eed-bb01eab41ce3', '3');
+INSERT INTO `position` VALUES ('c2d9ef5f-0a37-4921-8f9a-6c0f3cbcf405', '4001', '财务部经理', 12000, 1, '7304e7b3-b951-4ca1-a422-00a4762405de', '3');
 INSERT INTO `position` VALUES ('cbfec9b8-d693-41aa-80e6-c53dd03acecb', '1002', '系统管理员', 15000, 1, '128216ff-8d37-4c6c-b468-96391bd5f09a', '3');
 INSERT INTO `position` VALUES ('e5e8993c-243c-4c3f-86c2-b8e4802dd55a', '80001', '开发工程师', 8000, 1, '7ca44c62-7aa1-41dd-ba3e-4bea2c308f26', '2');
 
